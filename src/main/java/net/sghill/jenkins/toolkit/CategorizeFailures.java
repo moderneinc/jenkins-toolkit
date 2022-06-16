@@ -24,7 +24,7 @@ public class CategorizeFailures {
 
     public static void main(String[] args) {
         new CategorizeFailures(
-                Paths.get(System.getProperty("inputDir"))
+                Paths.get("jenkins-failed")
         ).run(args);
     }
 
