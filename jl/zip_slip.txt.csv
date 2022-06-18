@@ -1,0 +1,992 @@
+repo, public_repo_exists, jenkins_job_status
+https://github.com/0opslab/opslabJutil, true, blue
+https://github.com/0xbadbed/glassfish, false, not found
+https://github.com/105032013072/javaparser, false, red
+https://github.com/1and1/reactive, true, red
+https://github.com/275593469/study, true, blue
+https://github.com/451817970-qq-com/coffee, false, red
+https://github.com/505519551/unifig, false, red
+https://github.com/52North/WPS, false, red
+https://github.com/52North/javaps-iohandler, true, blue
+https://github.com/52North/matlab-control, false, red
+https://github.com/52North/movingcode, false, red
+https://github.com/5wimming/gadgetinspector, false, red
+https://github.com/5z1punch/lgtm-demo, false, red
+https://github.com/7040210/SuperBoot, true, red
+https://github.com/88t6/vwkit-matrix, false, not found
+https://github.com/8God/TwoBirdsExerHost, false, red
+https://github.com/AEFeinstein/mtg-familiar, false, red
+https://github.com/AKSW/KBox, false, red
+https://github.com/ATLauncher/ATLauncher, false, red
+https://github.com/AbFab3D/AbFab3D, false, not found
+https://github.com/AbrahamCaiJin/CommonUtilLibrary, false, red
+https://github.com/AdoptOpenJDK/IcedTea-Web, true, red
+https://github.com/Aefyr/SAI, true, blue
+https://github.com/Aharonabadi/fs-agent, true, blue
+https://github.com/AidenY/LocalReader, true, blue
+https://github.com/AirSkye/druid_0.19.0, false, red
+https://github.com/Al-assad/data-label-system-backend, true, blue
+https://github.com/Alluxio/alluxio, false, red
+https://github.com/AmazMod/AmazMod, true, blue
+https://github.com/And19898/bmobLibrary, false, red
+https://github.com/And19898/shishicai, false, red
+https://github.com/AndreyBaluevsky/lsFusion-platform, false, red
+https://github.com/AntoineCheron/padins-backend, true, blue
+https://github.com/ApolloFoundation/Apollo, false, red
+https://github.com/AppFormer/uberfire, false, not found
+https://github.com/AskNowQA/AutoSPARQL, false, red
+https://github.com/Atmosphere/nettosphere, false, red
+https://github.com/AuroraLS3/ROM-tools, false, not found
+https://github.com/Azure/asa-in-spark, false, not found
+https://github.com/Azure/azure-sdk-for-java, false, red
+https://github.com/Azure/batch-jenkins, false, red
+https://github.com/BaseXdb/basex, true, red
+https://github.com/BentoBoxWorld/BentoBox, false, red
+https://github.com/BiBiServ/bibiserv, false, red
+https://github.com/BiglySoftware/BiglyBT, true, red
+https://github.com/Bin-mario/xiaoyaoji, true, red
+https://github.com/BingAds/BingAds-Java-SDK, true, blue
+https://github.com/Blankj/AndroidUtilCode, true, blue
+https://github.com/BuildmLearn/BuildmLearn-Toolkit-Android, false, not found
+https://github.com/CUTR-at-USF/gtfs-osm-sync, false, not found
+https://github.com/CainKernel/CainCamera, true, blue
+https://github.com/CaiqueJhones/BaseSwing, false, red
+https://github.com/Camelliaguoqian/ofcms, true, red
+https://github.com/Catrobat/Catroid, true, blue
+https://github.com/CloudNetService/updateserver, false, red
+https://github.com/CloudOpting/cloudopting-manager, true, red
+https://github.com/CloudSlang/score, false, red
+https://github.com/CnPeng/PicSelector, true, blue
+https://github.com/CodingGay/BlackDex, true, blue
+https://github.com/Comcast/pantry, true, blue
+https://github.com/CompendiumNG/CompendiumNG, false, red
+https://github.com/CookieCadger/CookieCadger, false, not found
+https://github.com/CoreMedia/jangaroo-tools, false, red
+https://github.com/CruxFramework/crux, false, red
+https://github.com/ChestShop-authors/ChestShop-3, false, red
+https://github.com/ChestnutPlus/ModulesCommon, false, red
+https://github.com/Chris2011/minifierbeans, true, blue
+https://github.com/ChristophMetzner/ROB-SS14-BachProj, false, not found
+https://github.com/DDT-IDE/DDT, true, red
+https://github.com/DF1E/SimpleExplorer, false, red
+https://github.com/DSpace/DSpace, false, red
+https://github.com/DTStack/Taier, false, red
+https://github.com/Danielecantatore/AndroidUtilCode, false, red
+https://github.com/DaxiaK/MyDiary, false, red
+https://github.com/DbMaintain/dbmaintain, true, red
+https://github.com/DexDevLab/DexCraftLauncherClient, false, not found
+https://github.com/DexDevLab/DexCraftLauncherInit, false, not found
+https://github.com/DharmPatel/my-application, false, red
+https://github.com/DharmendraVinay/gradle, false, red
+https://github.com/DimuthuKasunWP/OFBIZ-Milky-Fresh-Diaries, false, red
+https://github.com/DraqueT/PolyGlot, false, red
+https://github.com/EasyinnovaSL/DPFManager, false, red
+https://github.com/EvoSuite/evosuite, false, red
+https://github.com/Evolveum/midpoint, false, red
+https://github.com/FederatedAI/FATE-Serving, true, red
+https://github.com/Fernando-Cos/App_DSpace_teste, false, red
+https://github.com/Fingann/Java-Deserialization, false, not found
+https://github.com/Flipkart/loader, false, red
+https://github.com/ForgeEssentials/ForgeEssentials, false, red
+https://github.com/FreedomZZQ/YouJoin-Android, false, red
+https://github.com/GaRyXiaoPh/shop, false, not found
+https://github.com/GeoWebCache/geowebcache, false, not found
+https://github.com/GeoscienceAustralia/earthsci, false, red
+https://github.com/GoClipse/goclipse, true, red
+https://github.com/GoogleCloudPlatform/appengine-maven-plugin, true, blue
+https://github.com/GoogleCloudPlatform/endpoints-framework-maven-plugin, true, blue
+https://github.com/GoogleCloudPlatform/gcloud-maven-plugin, true, blue
+https://github.com/HarvardPL/formulog, true, blue
+https://github.com/HongZhaoHua/jstarcraft-core, false, red
+https://github.com/HuygensING/timbuctoo, false, red
+https://github.com/IBM/ibm-cos-sdk-java, false, red
+https://github.com/IBM/transformation-advisor-sdk, false, red
+https://github.com/IHTSDO/release-validation-framework, false, red
+https://github.com/IQSS/dataverse, false, red
+https://github.com/IQSS/dvn, false, not found
+https://github.com/ITEA3-Measure/MeasureAgent, false, red
+https://github.com/ITEA3-Measure/MeasurePlatform, false, red
+https://github.com/IanDarwin/javasrc, false, red
+https://github.com/ImSejin/webtoon-list-extractor, false, red
+https://github.com/Innovationgate/OpenWGA, false, not found
+https://github.com/IntellectualSites/FastAsyncWorldEdit, false, red
+https://github.com/JMRI/JMRI, false, red
+https://github.com/JPressProjects/jpress, true, red
+https://github.com/JZ-Darkal/AndroidHttpCapture, true, blue
+https://github.com/JackOfMostTrades/gadgetinspector, false, red
+https://github.com/Jahia/jahia, false, red
+https://github.com/Javen205/IJPay-Demo, true, blue
+https://github.com/JoaoMFCardoso/chaospop, false, not found
+https://github.com/Judge-Girl/Judge-Girl, false, red
+https://github.com/KeepSafe/dexcount-gradle-plugin, true, blue
+https://github.com/KokaKiwi/MCLauncher, true, blue
+https://github.com/KylinOLAP/Kylin, false, red
+https://github.com/LEMS/jLEMS, true, blue
+https://github.com/LJWLgl/CommonUtil, true, blue
+https://github.com/Levy233/bangsun-neo4j, false, red
+https://github.com/LonamiWebs/Stringlate, false, not found
+https://github.com/MIkeeJY/honglou, true, blue
+https://github.com/MSPaintIDE/MSPaintIDE, false, red
+https://github.com/Mach5/supersonic, false, red
+https://github.com/Maescool/Catacomb-Snatch, false, red
+https://github.com/ManbangGroup/Phantom, false, red
+https://github.com/MangoAutomation/ma-core-public, false, red
+https://github.com/Manopraba/Pre_Reg_Common_kernel, false, red
+https://github.com/MarcusWolschon/osmeditor4android, true, blue
+https://github.com/MasonLiuChn/DecompileApk, false, red
+https://github.com/MicheleGuerra/MusicYouLike_Java, false, not found
+https://github.com/MikeMano1994/FileManager, false, red
+https://github.com/MinecraftForge/ForgeGradle, true, blue
+https://github.com/MiracleTanC/Neo4j-KGBuilder, true, red
+https://github.com/MissMR/xiling-android, false, red
+https://github.com/Moulberry/NotEnoughUpdates, false, red
+https://github.com/Multibit-Legacy/multibit-hd, false, red
+https://github.com/MyCATApache/Mycat-Server, true, blue
+https://github.com/MyCATApache/Mycat2, false, red
+https://github.com/MyCoRe-Org/mir, false, red
+https://github.com/MysteryZ/mcms, false, not found
+https://github.com/NativeScript/functional-tests-core, false, red
+https://github.com/NeoTerrm/NeoTerm, true, blue
+https://github.com/Netflix/Nicobar, true, blue
+https://github.com/Nexmo/pricing-tool, false, not found
+https://github.com/Nifiro/comicbooks, true, blue
+https://github.com/NixLabAdmin/Opencell, false, red
+https://github.com/OctopusDeploy/Octopus-TeamCity, false, red
+https://github.com/OneBusAway/onebusaway-application-modules, false, red
+https://github.com/Open-RIO/ToastAPI, false, red
+https://github.com/OpenBD/openbd-core, false, not found
+https://github.com/OpenClinica/OpenClinica, false, red
+https://github.com/OpenMap-java/openmap, false, not found
+https://github.com/OpenOLAT/OpenOLAT, false, red
+https://github.com/OpenRefine/OpenRefine, false, red
+https://github.com/OpenRock/OpenDJ, false, red
+https://github.com/OpenVidu/openvidu, false, red
+https://github.com/Optimusprimeums/Appbundler-UMS, false, not found
+https://github.com/OwnYourData/oyd-pia, true, blue
+https://github.com/PC-Logix/LanteaBot, false, red
+https://github.com/PhoenicisOrg/phoenicis, false, red
+https://github.com/Praqma/pretested-integration-plugin, true, blue
+https://github.com/PrisonTeam/Prison, true, red
+https://github.com/PseudoResonance/ResonantBot, false, red
+https://github.com/RBMHTechnology/vind, false, red
+https://github.com/RPTools/maptool, false, red
+https://github.com/RWS/Testy, false, red
+https://github.com/RaiMan/SikuliNG, false, not found
+https://github.com/RaiMan/SikuliX-2014, false, red
+https://github.com/Re-Volt/RVGL-Assistant_Android, false, red
+https://github.com/Red5/red5-server, false, red
+https://github.com/Red5/red5-server-common, false, red
+https://github.com/RestComm/sip-servlets, false, red
+https://github.com/ReverseEngineeringCUILahore/ofbiz-framework_without_git, false, not found
+https://github.com/Rubante/ruban, false, not found
+https://github.com/RustDT/RustDT, true, red
+https://github.com/SAP/cloud-language-servers-container, true, blue
+https://github.com/SCI2SUGR/KEEL, false, not found
+https://github.com/STAMP-project/EvoCrash, false, red
+https://github.com/Samourai-Wallet/sentinel-android, false, red
+https://github.com/Samsung/microbit, false, red
+https://github.com/SeanDragon/protools, true, red
+https://github.com/SeanLie/leleooche, false, red
+https://github.com/SeaseLtd/rated-ranking-evaluator, false, red
+https://github.com/SenhLinsh/Utils-Everywhere, true, blue
+https://github.com/Shayenen/agile-bpm, false, red
+https://github.com/SignalK/artemis-server, false, red
+https://github.com/Silverpeas/Silverpeas-Core, false, red
+https://github.com/SimpleServer/SimpleServer, false, not found
+https://github.com/SkriptLang/Skript, false, red
+https://github.com/SkyTubeTeam/SkyTube, false, red
+https://github.com/SleepyTrousers/EnderCore, false, red
+https://github.com/Slowpoke101/FTBLaunch, false, red
+https://github.com/SmartBear/soapui, false, red
+https://github.com/SmartReceipts/SmartReceiptsLibrary, true, blue
+https://github.com/SonarSource/SonarJS, false, red
+https://github.com/SonarSource/sonarqube, true, red
+https://github.com/Spoutcraft/LegacyLauncher, true, blue
+https://github.com/StuPro-TOSCAna/TOSCAna, true, red
+https://github.com/SudhirRana/Bharuwa-Patanjali, false, red
+https://github.com/SudhirRana/Bharuwa2, false, red
+https://github.com/SudhirRana/PBRI-Ofbiz-Development, false, red
+https://github.com/SudhirRana/Test-Patanjali-Development, false, red
+https://github.com/Suff99/Regeneration, false, blue
+https://github.com/SufficientlySecure/document-viewer, false, red
+https://github.com/Sztigar/bytecode-editor, false, red
+https://github.com/TNG/JGiven, true, red
+https://github.com/Talend/components, false, red
+https://github.com/Talend/daikon, false, red
+https://github.com/Talend/tmdm-common, false, red
+https://github.com/TechnicPack/LauncherCore, true, blue
+https://github.com/TechnionYP5777/UpAndGo, false, red
+https://github.com/Tencent/tinker, true, blue
+https://github.com/Terracotta-OSS/terracotta-core, false, red
+https://github.com/TheHortonMachine/hortonmachine, false, red
+https://github.com/TinkerBoard2-Android/external_javaparser, false, not found
+https://github.com/Transitime/core, false, red
+https://github.com/Transkribus/TranskribusCore, false, red
+https://github.com/Transkribus/TranskribusSwtGui, false, red
+https://github.com/TuSDK/TuSDK-for-Android-demo, true, blue
+https://github.com/UECIDE/UECIDE, false, not found
+https://github.com/UNIVALI-LITE/Portugol-Studio, false, red
+https://github.com/Ubhadiyap/Wavpay, false, red
+https://github.com/UnderwaterApps/overlap2d, false, red
+https://github.com/Unidata/IDV, false, not found
+https://github.com/UniversalMediaServer/ums-crowdin, true, blue
+https://github.com/Uranusboy/ofcms, false, not found
+https://github.com/VIDA-NYU/ache, true, blue
+https://github.com/Vertispan/j2clmavenplugin, false, red
+https://github.com/Vipter/demo, false, red
+https://github.com/WLIN534/UnCompress, false, red
+https://github.com/Waikato/weka-3.8, false, not found
+https://github.com/Waikato/weka-trunk, false, not found
+https://github.com/WeBankPartners/wecube-platform, true, red
+https://github.com/WebGoat/WebGoat, false, red
+https://github.com/Wynntils/Wynntils, true, blue
+https://github.com/Xilinx/RapidWright, false, red
+https://github.com/YANG-DB/yang-db, true, red
+https://github.com/Yelp/nrtsearch, false, red
+https://github.com/YiJiuSmile/kkFileViewOfficeEdit, true, red
+https://github.com/YuanYingChang/yuanRepository, false, red
+https://github.com/ZTO-Express/zms, true, red
+https://github.com/aNNiMON/Own-Programming-Language-Tutorial, true, blue
+https://github.com/aSmartVehicle/app-android, false, not found
+https://github.com/abhishekbasak/play-1.2.x-aspire, false, not found
+https://github.com/adempiere/adempiere, false, not found
+https://github.com/adminfaces/admin-designer, false, red
+https://github.com/adobe/htl-tck, true, blue
+https://github.com/afkT/DevUtils, false, red
+https://github.com/afquinteroq/entrevistacaracterizacion, false, not found
+https://github.com/afrl-rq/OpenAMASE, false, not found
+https://github.com/ahj/ComicClean, true, blue
+https://github.com/ak47wyh/boot-angular-filemanager, true, blue
+https://github.com/albert-lii/SUtils, false, red
+https://github.com/alexec/docker-java-orchestration, true, red
+https://github.com/alibaba/Alink, false, red
+https://github.com/alibaba/arthas, false, red
+https://github.com/alibaba/canal, false, red
+https://github.com/alibaba/tac, true, red
+https://github.com/aliyun/aliyun-odps-console, true, red
+https://github.com/allegro/grunt-maven-plugin, true, blue
+https://github.com/ambiverse-nlu/ambiverse-nlu, false, red
+https://github.com/anHALytics/anhalytics-core, true, red
+https://github.com/andrew-hoffman/halfnes, false, red
+https://github.com/andyglick/apache-ignite, false, red
+https://github.com/andyglick/chronos-maven-plugins, true, red
+https://github.com/angelozerr/tern.java, true, red
+https://github.com/ant-media/Ant-Media-Server, false, red
+https://github.com/anupk-adda/ak-nifi, false, red
+https://github.com/anylogic/alogic, false, red
+https://github.com/aosp-caf-upstream/platform_external_javaparser, true, red
+https://github.com/apache/ace, false, red
+https://github.com/apache/ant, false, not found
+https://github.com/apache/ant-ivy, false, not found
+https://github.com/apache/apex-core, true, red
+https://github.com/apache/archiva, true, red
+https://github.com/apache/aries, false, red
+https://github.com/apache/asterixdb, false, red
+https://github.com/apache/atlas, true, red
+https://github.com/apache/axis-axis2-java-core, false, red
+https://github.com/apache/bookkeeper, false, red
+https://github.com/apache/brooklyn-server, true, red
+https://github.com/apache/camel, false, red
+https://github.com/apache/commons-compress, true, blue
+https://github.com/apache/creadur-tentacles, true, blue
+https://github.com/apache/druid, false, red
+https://github.com/apache/dubbo, true, red
+https://github.com/apache/felix-atomos, false, red
+https://github.com/apache/flume, true, red
+https://github.com/apache/geronimo-batchee, true, red
+https://github.com/apache/hadoop-common, false, red
+https://github.com/apache/hama, false, red
+https://github.com/apache/hbase, false, red
+https://github.com/apache/ignite, false, red
+https://github.com/apache/incubator-batchee, true, red
+https://github.com/apache/incubator-retired-slider, false, red
+https://github.com/apache/incubator-sdap-mudrod, false, red
+https://github.com/apache/incubator-twill, true, red
+https://github.com/apache/jackrabbit-oak, false, red
+https://github.com/apache/karaf, false, red
+https://github.com/apache/karaf-cave, true, red
+https://github.com/apache/maven-doxia-sitetools, true, red
+https://github.com/apache/maven-shared, false, red
+https://github.com/apache/maven-verifier, true, blue
+https://github.com/apache/maven-wagon, true, red
+https://github.com/apache/metamodel, true, red
+https://github.com/apache/nifi, false, red
+https://github.com/apache/nifi-maven, true, blue
+https://github.com/apache/nifi-minifi, false, red
+https://github.com/apache/ofbiz-framework, false, red
+https://github.com/apache/ozone, false, red
+https://github.com/apache/pinot, false, red
+https://github.com/apache/rocketmq-streams, true, red
+https://github.com/apache/royale-compiler, true, red
+https://github.com/apache/servicemix-utils, true, blue
+https://github.com/apache/servicemix4-nmr, false, red
+https://github.com/apache/sling-org-apache-sling-feature-cpconverter, true, blue
+https://github.com/apache/sling-org-apache-sling-feature-extension-unpack, true, blue
+https://github.com/apache/stanbol, false, red
+https://github.com/apache/stratos, false, red
+https://github.com/apache/synapse, true, red
+https://github.com/apache/systemds, false, red
+https://github.com/apache/twill, true, red
+https://github.com/apache/uima-uimaj, false, red
+https://github.com/apache/uima-uimaj-io-jsoncas, true, blue
+https://github.com/apache/zeppelin, false, red
+https://github.com/approvals/ApprovalTests.Java, false, red
+https://github.com/arduino/Arduino, false, not found
+https://github.com/area515/Photonic3D, false, not found
+https://github.com/arquillian/arquillian-cube, false, red
+https://github.com/art-community/art-java, true, blue
+https://github.com/asakusafw/asakusafw, false, red
+https://github.com/astraube/taxiadv_android, true, blue
+https://github.com/atlasmap/atlasmap, false, red
+https://github.com/avbravo/jmoordb, false, red
+https://github.com/awslabs/aws-codepipeline-plugin-for-jenkins, true, blue
+https://github.com/ayltai/terraform-plugin, true, blue
+https://github.com/azkaban/azkaban-plugins, false, not found
+https://github.com/baidu/Elasticsearch, false, not found
+https://github.com/bbossgroups/bboss, true, red
+https://github.com/bdd/buck-test, false, not found
+https://github.com/bdemers/maven-wrapper, true, blue
+https://github.com/bigeyechou/Rxjava2Retrofit2NetFrame, false, red
+https://github.com/bingo1118/SmartCloudFire, false, red
+https://github.com/bioinformatics-ua/dicoogle, false, red
+https://github.com/bitcraze/crazyflie-android-client, true, blue
+https://github.com/bizright-llc/Bizrightllc_AmazonBI, true, blue
+https://github.com/bjzhenglq/web-server-simple, true, blue
+https://github.com/blackberry/WebWorks, false, red
+https://github.com/bndtools/bnd, false, red
+https://github.com/bob7l/HawkReloaded, false, red
+https://github.com/bonigarcia/webdrivermanager, true, blue
+https://github.com/bonitasoft/bonita-connector-document-templating, false, red
+https://github.com/bonitasoft/bonita-engine, true, aborted
+https://github.com/bpear/ARChon-Packager, false, red
+https://github.com/bruceLio/Git_My, false, red
+https://github.com/bspkrs/MCPMappingViewer, true, blue
+https://github.com/bullheadandplato/RootPGPExplorer, false, red
+https://github.com/bunnyblueair/ACDD, false, red
+https://github.com/burningwave/core, true, blue
+https://github.com/bymm/hive, false, red
+https://github.com/bytedeco/javacpp, true, blue
+https://github.com/calvinaquino/LNReader-Android, false, red
+https://github.com/camsys/onebusaway-nyc, false, red
+https://github.com/candlepin/candlepin, false, aborted
+https://github.com/castor-data-binding/castor, true, red
+https://github.com/castor-software/yajta, false, red
+https://github.com/cbeust/testng, true, aborted
+https://github.com/cdapio/cdap, false, red
+https://github.com/cehui0802/framework, true, red
+https://github.com/cehui0802/telecom, true, red
+https://github.com/cf-testorg/nifi-test, false, red
+https://github.com/cincheo/jsweet, false, not found
+https://github.com/cjbi/wetech-cms, true, red
+https://github.com/ckm007/lab-platform, false, red
+https://github.com/cloudups/iTransfer, false, red
+https://github.com/cmeng-git/atalk-android, false, red
+https://github.com/codefollower/H2-Research, true, blue
+https://github.com/codehaus-cargo/cargo, false, red
+https://github.com/codehaus-plexus/plexus-utils, true, blue
+https://github.com/codeprimate-software/cp-elements, true, blue
+https://github.com/cogtool/cogtool, false, not found
+https://github.com/conveyal/analyst-server, false, red
+https://github.com/copper-engine/copper-engine, true, blue
+https://github.com/core-lib/pigeon, true, red
+https://github.com/couchbase/couchbase-lite-java-core, false, red
+https://github.com/cpesch/RouteConverter, true, red
+https://github.com/crashinvaders/gdx-texture-packer-gui, true, blue
+https://github.com/crawljax/crawljax, false, red
+https://github.com/cs304-spring2021/javaparser, false, red
+https://github.com/cuileikun/AppDemos, false, red
+https://github.com/cybertaxonomy/cdmlib, true, red
+https://github.com/chaakula/SpringPractice, false, red
+https://github.com/chandansinghkiit/Spring_Webservice, false, red
+https://github.com/chung10/spring-boot-filemanager, true, blue
+https://github.com/datasalt/splout-db, false, red
+https://github.com/davemckain/qtiworks, true, red
+https://github.com/dbeaver/dbeaver, false, red
+https://github.com/decheng-zhang/GCRC_new_feature, false, red
+https://github.com/deepjavalibrary/djl, true, red
+https://github.com/deeplearning4j/oreilly-book-dl4j-examples, false, not found
+https://github.com/demidenko05/a-jetty-all, false, red
+https://github.com/dessalines/torrenttunes-client, true, blue
+https://github.com/dgageot/simplelenium, true, blue
+https://github.com/dgarijo/Widoco, false, red
+https://github.com/dice-group/Squirrel, false, red
+https://github.com/diwand/YapiIdeaUploadPlugin, true, blue
+https://github.com/dkpro/dkpro-core, false, red
+https://github.com/dlpuzcl/ofcms, true, red
+https://github.com/dockstore/cwlavro, false, red
+https://github.com/dockstore/dockstore-cli, false, red
+https://github.com/dodola/RocooFix, false, red
+https://github.com/dojo/dwb, true, blue
+https://github.com/dongliangde/agile-bpm, false, not found
+https://github.com/dreamXiong/hgl, true, red
+https://github.com/droidefense/engine, false, red
+https://github.com/dscalzi/ZipExtractor, false, red
+https://github.com/duanxingchen/nifi, false, red
+https://github.com/dunwu/javacore, true, red
+https://github.com/duty-os/white-demo-android, false, red
+https://github.com/dynamiatools/framework, false, red
+https://github.com/dzikoysk/pandomium, false, red
+https://github.com/eBay/mTracker, false, red
+https://github.com/eclipse-cdt/cdt, false, red
+https://github.com/eclipse-ee4j/eclipselink, false, red
+https://github.com/eclipse-ee4j/glassfish, false, red
+https://github.com/eclipse-ee4j/glassfish-fighterfish, false, red
+https://github.com/eclipse-ee4j/grizzly, false, red
+https://github.com/eclipse-ee4j/jax-rpc-ri, false, not found
+https://github.com/eclipse-vertx/vert.x, true, red
+https://github.com/eclipse/concierge, false, red
+https://github.com/eclipse/eclipse.pde.ui, false, not found
+https://github.com/eclipse/eclipse.platform.ua, false, not found
+https://github.com/eclipse/eclipse.platform.ui, false, not found
+https://github.com/eclipse/jetty.project, false, red
+https://github.com/eclipse/kitalpha, false, red
+https://github.com/eclipse/m2e.wtp, false, not found
+https://github.com/eclipse/mylyn.docs, false, not found
+https://github.com/eclipse/org.aspectj, false, red
+https://github.com/eclipse/pdt, false, red
+https://github.com/eclipse/rt.equinox.p2, false, not found
+https://github.com/eclipse/thym, true, red
+https://github.com/eclipse/tycho, false, red
+https://github.com/eclipse/virgo.ide, false, not found
+https://github.com/eclipse/webtools.common, false, not found
+https://github.com/eclipse/webtools.jsf, false, not found
+https://github.com/eclipse/webtools.sourceediting, false, not found
+https://github.com/eclipse/webtools.webservices, false, not found
+https://github.com/edolganov/live-chat-engine, false, not found
+https://github.com/eirslett/frontend-maven-plugin, true, red
+https://github.com/ekoontz/hadoop-common, false, not found
+https://github.com/elastest/elastest-user-emulator-service, false, not found
+https://github.com/elek/apache-ozone-mirror, false, red
+https://github.com/eleme/Intimate, false, red
+https://github.com/elexis/elexis-3-core, false, red
+https://github.com/elki-project/elki, true, aborted
+https://github.com/emailvivek247/Project3, false, not found
+https://github.com/enioka/jqm, false, not found
+https://github.com/epam/cloud-pipeline, false, red
+https://github.com/epri-dev/EPRI-OpenMetCalc, false, not found
+https://github.com/errai/errai, false, red
+https://github.com/exactpro/sailfish-core, true, blue
+https://github.com/exch-bms2/beatoraja, false, not found
+https://github.com/exch-bms2/bmorganizer, false, not found
+https://github.com/f-droid/fdroidclient, false, red
+https://github.com/fa1c0n1/apache_druid_0.20.0, false, red
+https://github.com/fabric8-launcher/launchpad-missioncontrol, true, red
+https://github.com/fabric8io/kubernetes-client, false, red
+https://github.com/fabric8io/vertx-maven-plugin, true, blue
+https://github.com/facebook/buck, false, not found
+https://github.com/facebookarchive/hadoop-20, false, not found
+https://github.com/fanhua1994/XBaseAndroid, true, blue
+https://github.com/fantasticlw/mvvmbase, true, blue
+https://github.com/fekracomputers/QuranAndroid, false, not found
+https://github.com/felix-zaslavskiy/lczero-test-worker, true, blue
+https://github.com/fenglin122/spring-boot, false, red
+https://github.com/fighter-lee/lancomm, true, blue
+https://github.com/finesoft/corant, false, red
+https://github.com/fisher-hub/hzz, false, red
+https://github.com/fj168104/mr-data-factory-phase3, false, not found
+https://github.com/flink-tpc-ds/flink, false, red
+https://github.com/flowfloe/AnalyticsManager, false, not found
+https://github.com/forge/furnace, false, red
+https://github.com/forzamilan0607/sinopec-bpm, false, red
+https://github.com/freedomotic/freedomotic, false, red
+https://github.com/frost373/KitDB, false, red
+https://github.com/gaozhixiaopengpeng/eladmin, false, red
+https://github.com/garybentley/quollwriter, false, not found
+https://github.com/gchq/stroom, false, red
+https://github.com/gdutxiaoxu/CoordinatorLayoutExample, false, red
+https://github.com/geogebra/geogebra, true, red
+https://github.com/geosolutions-it/imageio-ext, false, red
+https://github.com/geotools/geotools, false, red
+https://github.com/getodk/collect, false, red
+https://github.com/ghyaolong/app-distribution, false, red
+https://github.com/gitee2008/crowd, false, red
+https://github.com/gitee2008/glaf, false, red
+https://github.com/gitee2008/jbpm, false, red
+https://github.com/gitee2008/student_tb, false, red
+https://github.com/gluonhq/substrate, true, blue
+https://github.com/gmu-swe/phosphor, false, red
+https://github.com/gocd/gocd, true, red
+https://github.com/gomint/gomint, false, red
+https://github.com/google/cdep, false, red
+https://github.com/google/ios-device-control, true, blue
+https://github.com/google/sagetv, true, blue
+https://github.com/google/translation-cards, false, red
+https://github.com/gosu-lang/gosu-lang, true, red
+https://github.com/goxr3plus/JavaFXApplicationAutoUpdater, false, red
+https://github.com/goxr3plus/XR3Player, false, red
+https://github.com/gradle/gradle, false, red
+https://github.com/gradle/gradle-profiler, false, red
+https://github.com/gramoli/synchrobench, false, not found
+https://github.com/greenaddress/abcore, true, blue
+https://github.com/gridgain/gridgain, false, red
+https://github.com/gridgentoo/ignite2020_reverse, false, red
+https://github.com/gridgentoo/nifi, false, red
+https://github.com/gsantner/memetastic, true, blue
+https://github.com/guardianproject/orbot, false, red
+https://github.com/guventahsin/PLUS_BILLING_V2, false, red
+https://github.com/gwt-plugins/gwt-eclipse-plugin, false, red
+https://github.com/h1test-act/good, false, not found
+https://github.com/h2oai/h2o-2, false, red
+https://github.com/hamhc/WebGoat-7.1, false, not found
+https://github.com/handmadecode/quill, true, blue
+https://github.com/hankcs/HanLP, false, not found
+https://github.com/hanshou101/codeql________SonatypeNexusRepository________9fb1dabc, false, red
+https://github.com/hanshou101/codeql________ofcms________bf2e982a, false, red
+https://github.com/hariprasad1950/spring, false, red
+https://github.com/hashgraph/hedera-services, false, red
+https://github.com/hawtio/hawtio, true, red
+https://github.com/healthchuang/waebbcMdaenfaggheirj, false, not found
+https://github.com/heathcare/heathcare, false, red
+https://github.com/heichen/JeeSite, true, blue
+https://github.com/hellodonj/WeBig, false, red
+https://github.com/hellokaton/java-library-examples, false, red
+https://github.com/hemau23/dbmaintain, false, red
+https://github.com/henuuDigPlayer/xiaoyaoji, true, red
+https://github.com/heqiangflytosky/AndroidUtils, false, red
+https://github.com/hilmialyaz/OpencellV2, false, red
+https://github.com/hilmialyaz/telcoandmore_opencell, false, red
+https://github.com/hrehfeld/QuakeInjector, true, blue
+https://github.com/hustpeng/meet, false, red
+https://github.com/hxk1224/DriveStudent, false, not found
+https://github.com/hyb1996/Auto.js, false, red
+https://github.com/i-net-software/JWebAssembly, false, red
+https://github.com/i-net-software/SetupBuilder, false, blue
+https://github.com/i2p/i2p.i2p, false, red
+https://github.com/iBotPeaches/Apktool, true, aborted
+https://github.com/iSafeBlue/TrackRay, true, red
+https://github.com/ia-toki/judgels, false, not found
+https://github.com/ibinti/bugvm, false, red
+https://github.com/ibissource/iaf, false, red
+https://github.com/icpctools/icpctools, false, not found
+https://github.com/icza/scelight, false, red
+https://github.com/ifjoker/runonce, false, not found
+https://github.com/ifreefly/AutoScore, true, blue
+https://github.com/igniterealtime/Openfire, false, red
+https://github.com/igniterealtime/Spark, true, red
+https://github.com/igniterealtime/Whack, true, red
+https://github.com/igniterealtime/openfire-ofmeet-plugin, true, red
+https://github.com/igvteam/igv, false, red
+https://github.com/ilscipio/scipio-erp, false, not found
+https://github.com/imagej/ImageJA, false, not found
+https://github.com/imagej/imagej-tensorflow, true, blue
+https://github.com/inception-project/inception, false, red
+https://github.com/infowangxin/springmvc, true, blue
+https://github.com/innokenty/swing-file-browser, true, blue
+https://github.com/inspire-software/yes-cart, true, red
+https://github.com/intoolswetrust/jd-cli, true, red
+https://github.com/intuit/Tank, false, red
+https://github.com/ios-driver/ios-driver, false, red
+https://github.com/iqiyi/Lens, false, red
+https://github.com/iqiyi/Neptune, true, blue
+https://github.com/ireaderlab/ZeusHotfix, false, red
+https://github.com/irispastal/jeecmsv9, true, blue
+https://github.com/ironjacamar/ironjacamar, false, red
+https://github.com/isislab-unisa/sof, true, blue
+https://github.com/itdelatrisu/opsu, false, red
+https://github.com/itesla/ipst, false, red
+https://github.com/j-crawford/uPortal, false, red
+https://github.com/jamiecool/java_nofork, false, red
+https://github.com/javaparser/javaparser, true, red
+https://github.com/jbake-org/jbake, true, blue
+https://github.com/jboss-fuse/redhat-fuse, false, red
+https://github.com/jboss-modules/jboss-modules, false, red
+https://github.com/jbossas/jboss-as-maven-plugin, false, red
+https://github.com/jbosstools/jbosstools-maven-plugins, false, not found
+https://github.com/jease/jease, false, red
+https://github.com/jeecgboot/jeecg, false, red
+https://github.com/jenkinsci/blueocean-maven-plugin, true, blue
+https://github.com/jenkinsci/ca-apm-plugin, true, red
+https://github.com/jenkinsci/clif-performance-testing-plugin, true, blue
+https://github.com/jenkinsci/custom-war-packager, true, red
+https://github.com/jenkinsci/docker-fixtures, true, blue
+https://github.com/jenkinsci/fabric-beta-publisher-plugin, false, red
+https://github.com/jenkinsci/jenkinsfile-runner, false, red
+https://github.com/jenkinsci/job-config-history-plugin, true, blue
+https://github.com/jenkinsci/maven-hudson-dev-plugin, true, blue
+https://github.com/jenkinsci/netx, true, blue
+https://github.com/jenkinsci/p4-plugin, true, blue_anime
+https://github.com/jenkinsci/plugin-installation-manager-tool, false, red
+https://github.com/jenkinsci/signpath-plugin, true, blue
+https://github.com/jenkinsci/spring-initalzr-plugin, false, red_anime
+https://github.com/jenkinsci/thin-backup-plugin, true, blue
+https://github.com/jenkinsci/tm4j-automation-plugin, true, blue
+https://github.com/jenkinsci/winstone, true, blue
+https://github.com/jentrata/jentrata-msh, false, red
+https://github.com/jhunters/jprotobuf, false, red
+https://github.com/jiangboh/ScannerController, false, red
+https://github.com/jiangtaopig/ZhuProject, false, not found
+https://github.com/jitsi/jitsi-videobridge-openfire-plugin, true, blue
+https://github.com/jjzhang166/XBaseAndroid, false, red
+https://github.com/jmc2obj/j-mc-2-obj, true, blue
+https://github.com/jmeter-maven-plugin/jmeter-maven-plugin, true, blue
+https://github.com/joachimhs/Embriak, false, not found
+https://github.com/johncarlos19/CSUITE, false, not found
+https://github.com/jpos/jPOS, true, red
+https://github.com/jpverkamp/wombat-ide, false, not found
+https://github.com/jrialland/parserjunior, false, not found
+https://github.com/juliapim/DiSSCo-Prepare, false, red
+https://github.com/junjunguo/PocketMaps, false, not found
+https://github.com/junobuild/Juno, false, not found
+https://github.com/kermitt2/grobid, true, red
+https://github.com/keuin/KBackup-Fabric, false, red
+https://github.com/kiegroup/appformer, false, red
+https://github.com/kiegroup/kie-wb-common, false, red
+https://github.com/killbill/killbill-platform, false, red
+https://github.com/kiransp77/jaaava, true, red
+https://github.com/knopflerfish/knopflerfish.org, false, not found
+https://github.com/koenberton/mvnTrainingThree, true, blue
+https://github.com/koolskateguy89/Mobile-OS, false, red
+https://github.com/ksvc/KSYMediaEditorKit_Android, false, not found
+https://github.com/kubernetes-client/java, false, red
+https://github.com/kuinne/somecloud, false, not found
+https://github.com/kuinne/somersaultcloud, false, not found
+https://github.com/kumuluz/kumuluzee, false, red
+https://github.com/l-e-x/leos, false, red
+https://github.com/lahwran/renamer-maven-plugin, true, blue
+https://github.com/lance1992kun/IBenRobotDemo, false, red
+https://github.com/lealone/Lealone, false, red
+https://github.com/lebonq/modpack_updater, false, red
+https://github.com/liangdy/CloudStation, false, red
+https://github.com/liferay/liferay-blade-cli, true, red
+https://github.com/liferay/liferay-ide, false, red
+https://github.com/liferay/liferay-intellij-plugin, false, red
+https://github.com/lilin409546297/spring-source, true, blue
+https://github.com/lilylotus/arbitrary-coding, false, red
+https://github.com/linkedin/parseq, true, aborted
+https://github.com/linkedpipes/etl, false, red
+https://github.com/linuxcali/jain-slee, true, red
+https://github.com/lipeiyong/trip, false, red
+https://github.com/liveqmock/kcPlatform, false, not found
+https://github.com/logpresso/CVE-2021-44228-Scanner, true, blue
+https://github.com/loklak/loklak_server, true, blue
+https://github.com/lolo101/MsgViewer, false, red
+https://github.com/loooon/fitnesse, true, blue
+https://github.com/luckyQing/patch, false, red
+https://github.com/lukaszlenart/launch4j-maven-plugin, true, blue
+https://github.com/lutfialquraan/literatum-lutfi, true, blue
+https://github.com/lvyahui8/jutils, true, blue
+https://github.com/llmhyy/evosuite-plus-plus, false, red
+https://github.com/maisui007/snoopy-console, false, red
+https://github.com/malbanGit/Vide, false, not found
+https://github.com/manifestlifeinc/open-liberty, false, not found
+https://github.com/maning0303/GankMM, true, blue
+https://github.com/marie-christin/jaulp.core, true, red
+https://github.com/marklogic/marklogic-data-hub, true, blue
+https://github.com/marubinotto/Piggydb, false, not found
+https://github.com/marytts/marytts, true, aborted
+https://github.com/marzika/Snapprefs, false, red
+https://github.com/matthewgallina/smockin, true, blue
+https://github.com/mawensen/HRAdmin-Backend, true, red
+https://github.com/maxcheung998/relive, true, blue
+https://github.com/mcxiaoke/Android-Next, false, red
+https://github.com/mediathekview/MediathekView, false, red
+https://github.com/menghucheng/test, true, blue
+https://github.com/mercedes-benz/sechub, true, aborted
+https://github.com/mercyblitz/confucius-commons, true, red
+https://github.com/mgarin/weblaf, true, red
+https://github.com/microapp-store/flash-waimai, true, red
+https://github.com/mnhlt/TMP-JOSM, false, not found
+https://github.com/montoyo/mcef, false, red
+https://github.com/moodysalem/java-phantomjs-wrapper, false, red
+https://github.com/moxi624/mogu_blog_v2, false, red
+https://github.com/mozilla/offline-kws-stt-intent-parsing-android, false, red
+https://github.com/mpue/blackboard, false, not found
+https://github.com/mrc-ide/PhyDyn, false, not found
+https://github.com/mufeng521/ToolProject, false, red
+https://github.com/mukesh154/test, true, aborted
+https://github.com/mulesoft-labs/rhinodo, false, red
+https://github.com/mulesoft/mule, false, red
+https://github.com/murer/mycontainer, true, red
+https://github.com/mwwojcik/4Fotos, false, red
+https://github.com/myamoto/HeavyFeather, true, blue
+https://github.com/mzmine/mzmine2, false, red
+https://github.com/mzmine/mzmine3, false, red
+https://github.com/na2co3-ftw/AndroidSKK, true, blue
+https://github.com/nanos-11/ProjectCollection, false, red
+https://github.com/nasa/podaac_tools_and_services, false, not found
+https://github.com/naver/ngrinder, true, blue
+https://github.com/neo4j-contrib/neo4j-graph-algorithms, true, red
+https://github.com/neo4j/neo4j, false, red
+https://github.com/netarchivesuite/netarchivesuite, true, red
+https://github.com/netxms/netxms, false, not found
+https://github.com/neuhalje/bouncy-gpg, true, blue
+https://github.com/ngageoint/disconnected-content-explorer-android, false, red
+https://github.com/ngageoint/mage-android-sdk, false, red
+https://github.com/nguyenq/lept4j, true, blue
+https://github.com/nguyenq/tess4j, true, blue
+https://github.com/ngyewch/UnityPackager, false, red
+https://github.com/ngyewch/gradle-fjage-plugin, true, blue
+https://github.com/nicksellen/reka, false, red
+https://github.com/nikita36078/J2ME-Loader, false, red
+https://github.com/nikosnikolaidis/nifi, false, red
+https://github.com/nining377/UnblockMusicPro_Xposed, false, red
+https://github.com/nining377/dolby_beta, false, red
+https://github.com/nishantverma160380/Spring-Security, false, red
+https://github.com/nla/httrack2warc, true, blue
+https://github.com/noboomu/proteus, false, red
+https://github.com/nordic-institute/misp2-web-app, true, blue
+https://github.com/nuls-io/nuls-v1, false, red
+https://github.com/nuxeo/nuxeo, false, red
+https://github.com/nuxeo/nuxeo-ide, false, red
+https://github.com/nviennot/jd-core-java, false, red
+https://github.com/nwpushuai/BUCK, false, not found
+https://github.com/obiba/obiba-commons, true, red
+https://github.com/obiba/onyx, false, red
+https://github.com/octopus-platform/joern, false, red
+https://github.com/omegat-org/omegat, false, red
+https://github.com/onap/archive-ecompsdkos, false, not found
+https://github.com/onap/archived-portal-sdk, false, not found
+https://github.com/onap/sdc-jtosca, false, red
+https://github.com/onemoonsci/nmrfx-core, false, red
+https://github.com/onyxbits/raccoon4, false, red
+https://github.com/open-eid/MOPP-Android, false, red
+https://github.com/openengsb/openengsb, false, red
+https://github.com/opengeospatial/teamengine, false, red
+https://github.com/openjdk/jdk, false, not found
+https://github.com/openjdk/jdk8u, false, not found
+https://github.com/openl-tablets/openl-tablets, false, red
+https://github.com/openmrs/openmrs-core, true, red
+https://github.com/openmrs/openmrs-module-reporting, true, red
+https://github.com/opensha/opensha-svn-archive, false, not found
+https://github.com/openslx/eaas-server, false, not found
+https://github.com/opensourceBIM/BIMserver, false, red
+https://github.com/opentraffic/traffic-engine, false, red
+https://github.com/opentripplanner/OpenTripPlanner, false, red
+https://github.com/opersys/process-explorer-app, false, red
+https://github.com/opoo/opoopress, true, red
+https://github.com/ops4j/org.ops4j.pax.exam2, false, red
+https://github.com/oracle/opengrok, false, red
+https://github.com/orientechnologies/orientdb, true, red
+https://github.com/os72/protoc-jar-maven-plugin, true, blue
+https://github.com/oskariorg/oskari-server, true, red
+https://github.com/osmarleandro/RefactoringMiner, true, blue
+https://github.com/osmlab/atlas, false, red
+https://github.com/ow2-proactive/scheduling, false, red
+https://github.com/ox-it/gaboto, false, red
+https://github.com/ox-it/sakai, false, red
+https://github.com/oyachai/HearthSim, false, red
+https://github.com/palantir/spark-tpcds-benchmark, false, red
+https://github.com/pangyuanjd/sonarqueb, false, red
+https://github.com/parry-li/AndroidToolsUtils, false, red
+https://github.com/payara/Payara, false, red
+https://github.com/paypal/SeLion, false, red
+https://github.com/pcingola/SnpEff, false, red
+https://github.com/pedromanjarresserrano/FAWSAC, false, red
+https://github.com/pentaho/pentaho-platform, false, red
+https://github.com/perye/dokit, true, blue
+https://github.com/pf4j/pf4j, false, red
+https://github.com/pipimi110/ofcms-master, true, red
+https://github.com/pippo-java/pippo, true, red
+https://github.com/piranhacloud/piranha, false, red
+https://github.com/poorhua/matchfee, false, red
+https://github.com/porcupineyhairs/collection, false, not found
+https://github.com/powsybl/powsybl-core, false, red
+https://github.com/prestodb/presto, false, red
+https://github.com/processing/processing, false, not found
+https://github.com/progilone/numahop, false, red
+https://github.com/projectodd/wunderboss, false, red
+https://github.com/projeto-siga/siga, true, red
+https://github.com/protegeproject/protege, true, red
+https://github.com/protegeproject/webprotege, false, red
+https://github.com/pulse00/Symfony-2-Eclipse-Plugin, false, red
+https://github.com/puniverse/capsule, false, red
+https://github.com/pwm-project/pwm, false, red
+https://github.com/pysambrero/revenge_studio, true, blue
+https://github.com/pzstorm/capsid, false, red
+https://github.com/qq53182347/liugh-parent, true, red
+https://github.com/quelea-projection/Quelea, false, not found
+https://github.com/questdb/questdb, false, red
+https://github.com/qzind/tray, false, not found
+https://github.com/radargun/radargun, false, red
+https://github.com/rainbowQQsugar/ontap, false, red
+https://github.com/rapidminer/rapidminer-5, false, not found
+https://github.com/rapidminer/rapidminer-studio, false, red
+https://github.com/rapidoid/rapidoid, false, red
+https://github.com/raydac/mvn-golang, false, red
+https://github.com/razerdp/BasePopup, false, red
+https://github.com/reddr/LibScout, false, red
+https://github.com/redhat-developer/rsp-server, false, red
+https://github.com/reinier-vegter/tst_jenkins_old, false, red
+https://github.com/renyuneyun/Easer, false, red
+https://github.com/res13/acModDownloader, false, not found
+https://github.com/restx/restx, true, red
+https://github.com/rickliu79/agile-bpm-agile-bpm-basic, false, red
+https://github.com/rjurney/Cloud-Stenography, false, not found
+https://github.com/rmtheis/android-ocr, false, red
+https://github.com/rob42/freeboard-server, false, red
+https://github.com/robertdeocampojr/jspringbot-selenium-extension, false, red
+https://github.com/robo-code/robocode, true, aborted
+https://github.com/robovm/robovm, false, red
+https://github.com/robovm/robovm-gradle-plugin, false, red
+https://github.com/rostam/GraphTea, false, not found
+https://github.com/s-andrews/FastQC, false, not found
+https://github.com/s1155030742/IndieLink_2.0, false, red
+https://github.com/sachinparthasarathy/Compression, true, blue
+https://github.com/salesforce/apollo, false, red
+https://github.com/sanluan/PublicCMS, false, not found
+https://github.com/scenarioo/scenarioo, true, aborted
+https://github.com/scifio/scifio, true, blue
+https://github.com/scijava/script-editor, true, blue
+https://github.com/scoophealth/oscar, false, red
+https://github.com/scottstav/xml-ingest, false, red
+https://github.com/scouter-project/scouter, true, red
+https://github.com/scy888/springboot_tensquare, true, red
+https://github.com/schemaspy/schemaspy, true, blue
+https://github.com/senbox-org/s3tbx, false, red
+https://github.com/senbox-org/snap-desktop, true, red
+https://github.com/serenity-bdd/serenity-core, false, red
+https://github.com/shallows-hub/bpm, false, red
+https://github.com/shanika04/IcedTea_PT, true, red
+https://github.com/shenxiaoyan/xiaojinshju, false, red
+https://github.com/shukia/pippo-unsafe, true, red
+https://github.com/shuzheng/zheng, false, red
+https://github.com/shwenzhang/AndResGuard, false, red
+https://github.com/simpligility/android-maven-plugin, false, red
+https://github.com/skloibi/jpmb, false, not found
+https://github.com/skubit/skubit-comics, false, red
+https://github.com/skylot/raung, false, red
+https://github.com/smuyyh/BookReader, false, red
+https://github.com/smuyyh/CommonLibary, false, red
+https://github.com/smuyyh/SprintNBA, false, red
+https://github.com/soasecurity/carbon-kernel, false, red
+https://github.com/sofastack/sofa-ark, false, red
+https://github.com/sohutv/mqcloud, true, red
+https://github.com/sonatype/nexus-public, false, red
+https://github.com/spgangwar7/UniTrack_UniQ, true, blue
+https://github.com/sphinx02/AppStarter, false, not found
+https://github.com/spinnaker/clouddriver, false, red
+https://github.com/spring-attic/impala, false, red
+https://github.com/spring-attic/spring-hadoop, false, red
+https://github.com/spring-attic/spring-migration-analyzer, false, red
+https://github.com/spring-cloud/spring-cloud-contract, false, red
+https://github.com/spring-io/sagan, false, not found
+https://github.com/spring-projects/spring-boot, false, red
+https://github.com/spring-projects/spring-data-gemfire, false, red
+https://github.com/spring-projects/spring-data-geode, false, red
+https://github.com/spring-projects/spring-test-data-geode, false, red
+https://github.com/stoicflame/enunciate, true, red
+https://github.com/strapdata/elassandra, false, red
+https://github.com/structr/structr, false, red
+https://github.com/stzdzyhs/bms, true, blue
+https://github.com/stzdzyhs/web1, true, blue
+https://github.com/subhra74/xdm, false, not found
+https://github.com/symphonyoss/canon, true, red
+https://github.com/synaptik-/SelfUpdatingAndroidHybrid, false, not found
+https://github.com/t-oster/VisiCut, false, red
+https://github.com/takimafr/androidkickstartr, true, red
+https://github.com/tarun3kumar/seleniumtestsframework, false, red
+https://github.com/tcmeneses/siga, false, red
+https://github.com/tencentyun/iot-device-java, true, red
+https://github.com/termux/termux-app, true, blue
+https://github.com/terrorizer1980/senzing-api-server, false, red
+https://github.com/testanull/liferay-portal, false, not found
+https://github.com/teutahyseni/testThis, false, red
+https://github.com/thaliproject/Tor_Onion_Proxy_Library, false, red
+https://github.com/thatcherclough/BetterBackdoor, true, blue
+https://github.com/thinkgem/jeesite, false, blue
+https://github.com/thorntail/thorntail, false, red
+https://github.com/thrau/jarchivelib, false, red
+https://github.com/threerings/getdown, true, red
+https://github.com/tihamania/webshop, false, red
+https://github.com/to2mbn/JMCCC, false, red
+https://github.com/toddlipcon/hadoop, false, not found
+https://github.com/tomahawk-player/tomahawk-android, false, red
+https://github.com/tomdz/sphinx-maven, true, blue
+https://github.com/tomsik68/mclauncher-api, true, blue
+https://github.com/toyzhou/phm, false, not found
+https://github.com/treexi/wework, true, blue
+https://github.com/tsantalis/RefactoringMiner, false, red
+https://github.com/tsslisimin/new_erm, false, not found
+https://github.com/tterrag1098/BON2, false, red
+https://github.com/tutorial0/flink-1.11.0, false, red
+https://github.com/tututututututu/TallyBook, false, red
+https://github.com/twasyl/SlideshowFX, false, red
+https://github.com/tylerpitchford/bitmap-all-the-things, false, red
+https://github.com/typ0520/fastdex, false, red
+https://github.com/tzjit520/repository, false, not found
+https://github.com/uPortal-Project/uPortal, true, aborted
+https://github.com/uainc/hadoop, false, not found
+https://github.com/uea-machine-learning/tsml, false, red
+https://github.com/uitile/ofcms, false, not found
+https://github.com/unifig/unifig, false, red
+https://github.com/vaadin/wscdn-client, true, blue
+https://github.com/valery1707/kaitai-maven-plugin, true, blue
+https://github.com/vanei-heidemann/retrocenter.java, true, red
+https://github.com/vazexqi/JFlowBenchmarks-old, false, not found
+https://github.com/vert-x3/vertx-config, true, red
+https://github.com/vidylin/SmartCloudFire, false, red
+https://github.com/vipshop/pallas, true, red
+https://github.com/virtix/webdriver, false, red
+https://github.com/vmware/singleton, false, not found
+https://github.com/w446108264/AndroidEmoji, false, not found
+https://github.com/wandora-team/wandora, false, not found
+https://github.com/wangdefa7/SpringBoot-WDF, true, blue
+https://github.com/wangfei0904306/unionpay, true, blue
+https://github.com/wangweiomg/credit-center, false, red
+https://github.com/wangwenteng/CommonUtil, true, blue
+https://github.com/wangyong0716/Firenews, false, red
+https://github.com/wangyongxing/spring-mvc, false, not found
+https://github.com/webanno/webanno, false, red
+https://github.com/webbukkit/dynmap, false, red
+https://github.com/wedxz/baseModul, false, red
+https://github.com/wei4a/utils, false, red
+https://github.com/wfh45678/radar, true, red
+https://github.com/wildfly/wildfly-core, false, red
+https://github.com/winterselmon/Practiceandlearn, false, red
+https://github.com/wocommunity/wonder, true, red
+https://github.com/wongkyunban/TissonVC, false, red
+https://github.com/wpilibsuite/native-utils, true, blue
+https://github.com/wso2-attic/product-private-paas, false, red
+https://github.com/wso2-extensions/identity-userstore-ldap, false, red
+https://github.com/wso2/carbon-appmgt, false, red
+https://github.com/wso2/carbon-business-process, false, red
+https://github.com/wso2/carbon-device-mgt-plugins, false, red
+https://github.com/wso2/carbon-governance-extensions, false, red
+https://github.com/wso2/carbon-platform-integration, false, red
+https://github.com/wso2/carbon-registry, false, red
+https://github.com/wso2/developer-studio, false, red
+https://github.com/wso2/jaggery, true, red
+https://github.com/wso2/maven-tools, false, red
+https://github.com/wso2/micro-integrator, false, red
+https://github.com/wso2/product-ei, false, red
+https://github.com/wso2/security-tools, false, not found
+https://github.com/wso2/wso2-axis2, true, red
+https://github.com/wso2/wso2-ode, false, red
+https://github.com/wso2/wso2-synapse, false, red
+https://github.com/wuchong/flink-hackathon, false, red
+https://github.com/xaniox/HeavySpleef, false, red
+https://github.com/xiechangzhen/agile-bpm, false, red
+https://github.com/xin-fork/sonarqube-7.0, false, not found
+https://github.com/xinxiamu/MuStudy, true, red
+https://github.com/xy900/jeecmsv9_3, true, blue
+https://github.com/y6692/qimalock_app, false, red
+https://github.com/yWorks/yGuard, false, red
+https://github.com/yacy/yacy_grid_parser, false, red
+https://github.com/yacy/yacy_search_server, false, red
+https://github.com/yahoo/parsec, true, blue
+https://github.com/yangfuhai/jboot, true, blue
+https://github.com/yangjiantao/RapidAnt, false, red
+https://github.com/yangkun19921001/DexEncryptionDecryption, true, blue
+https://github.com/yaohuizhou/attpg, false, not found
+https://github.com/yaozs/YzsLib, false, red
+https://github.com/yinwang0/pysonar2, true, blue
+https://github.com/yinwang0/rubysonar, true, blue
+https://github.com/yizhaorong/intranet_app_manager, true, blue
+https://github.com/yngplgDiego/nifi.diego, false, red
+https://github.com/yuanmabiji/spring-boot-2.1.0.RELEASE, false, red
+https://github.com/yuuki1967/sonarqube, false, red
+https://github.com/yuzhaoyang001/ofcms, true, red
+https://github.com/ywwynm/EverythingDone, false, red
+https://github.com/z1978/zac-spring-boot-manager, true, blue
+https://github.com/zbazztian/webgoat-delombok, false, red
+https://github.com/zeroturnaround/zt-zip, true, blue
+https://github.com/zhangschong/VhManager, false, red
+https://github.com/zhangyin2088/Teamcat, false, not found
+https://github.com/zhangyp1/demo, false, not found
+https://github.com/zhengqingya/code-generator, false, not found
+https://github.com/zhey/decompression, true, blue
+https://github.com/zhimin711/ch, false, red
+https://github.com/zhongjibing/utils, false, red
+https://github.com/zolyfarkas/spf4j, false, red
+https://github.com/zxfnicholas/CameraSDK, false, red
+https://github.com/zzz40500/Tinker_imitator, false, red
