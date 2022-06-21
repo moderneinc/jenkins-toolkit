@@ -1,7 +1,8 @@
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
 plugins {
-    `java-library`
+    id("org.springframework.boot") version "2.7.0"
     groovy
-    id("io.freefair.lombok") version "6.4.3"
 }
 
 group = "net.sghill.jenkins"
@@ -18,15 +19,18 @@ repositories {
 
 dependencies {
     "jenkinsCompileOnly"("org.jenkins-ci.main:jenkins-core:2.332.3")
+    "jenkinsCompileOnly"("javax.servlet:javax.servlet-api:4.0.1")
 
-    implementation("org.slf4j:slf4j-api:1.7.36")
     implementation(platform(libs.okhttp.bom))
     implementation(libs.okhttp.core)
     implementation("info.debatty:java-string-similarity:2.0.0")
     implementation(platform(libs.jackson.bom))
     implementation(libs.bundles.retrofit)
+    implementation(platform(SpringBootPlugin.BOM_COORDINATES))
 
-    runtimeOnly("org.slf4j:slf4j-simple:1.7.36")
+    implementation("com.netflix.graphql.dgs:graphql-dgs-client:latest.release")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("ch.qos.logback:logback-classic")
 
     testImplementation(platform(testLibs.junit.bom))
     testImplementation(platform(testLibs.mockito.bom))
@@ -35,6 +39,9 @@ dependencies {
     testImplementation(libs.commons.io)
 
     testRuntimeOnly(testLibs.junit.engine)
+
+    compileOnly("org.projectlombok:lombok:latest.release")
+    annotationProcessor("org.projectlombok:lombok:latest.release")
 }
 
 tasks.withType<JavaCompile> {

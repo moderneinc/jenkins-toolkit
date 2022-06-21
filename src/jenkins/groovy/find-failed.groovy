@@ -9,9 +9,6 @@ import java.time.temporal.ChronoUnit
 def threshold = Instant.now().minus(1, ChronoUnit.DAYS)
 def projects = Jenkins.get().getAllItems(AbstractProject)
 for (AbstractProject<AbstractProject, AbstractBuild> project : projects) {
-    if (!project.getName().startsWith('jenkinsci')) {
-        continue
-    }
     for (AbstractBuild build : project.builds) {
         if (build.result != Result.FAILURE) {
             continue
