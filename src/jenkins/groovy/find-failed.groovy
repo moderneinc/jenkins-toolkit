@@ -22,4 +22,4 @@ for (AbstractProject<AbstractProject, AbstractBuild> project : projects) {
         println([jobName, build.id, consoleTextUrl].join("\t"))
     }
 }
-null
+

@@ -5,7 +5,13 @@ plugins {
     groovy
 }
 
-group = "net.sghill.jenkins"
+group = "io.moderne.jenkins"
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
 
 sourceSets {
     register("jenkins")
