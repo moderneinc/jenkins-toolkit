@@ -36,7 +36,7 @@ public class FetchFailed {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(1, TimeUnit.MINUTES)
                 .callTimeout(1, TimeUnit.MINUTES)
-                .readTimeout(1, TimeUnit.MINUTES)
+                .readTimeout(5, TimeUnit.MINUTES)
                 .build();
         new FetchFailed(okHttpClient, out, url, groovyScript).run(args);
     }
@@ -46,7 +46,7 @@ public class FetchFailed {
                 .header("Authorization", credential).build();
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
-                log.error("Unexpected status {}", response);
+                log.error("{}: Unexpected status {}", request.url(), response);
                 throw new IllegalStateException("Unexpected status " + response.code());
             }
             JsonNode responseNode = new ObjectMapper().readValue(response.body().string(), JsonNode.class);
@@ -110,6 +110,8 @@ public class FetchFailed {
                             } else {
                                 Files.copy(body.byteStream(), outputDir.resolve(String.join(".", f.getJobName(), f.getBuildNumber(), "txt")), StandardCopyOption.REPLACE_EXISTING);
                             }
+                        } catch (IOException e) {
+                            log.warn("IOException fetching console text {}", call.request().url(), e);
                         } finally {
                             latch.countDown();
                         }
