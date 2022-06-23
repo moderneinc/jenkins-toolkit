@@ -33,7 +33,11 @@ public class FetchFailed {
         Path out = Paths.get(System.getProperty("outDir", "jenkins-failed"));
         Path groovyScript = Paths.get("src/jenkins/groovy/find-failed.groovy");
 
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().connectTimeout(1, TimeUnit.MINUTES).callTimeout(1, TimeUnit.MINUTES).build();
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(1, TimeUnit.MINUTES)
+                .callTimeout(1, TimeUnit.MINUTES)
+                .readTimeout(1, TimeUnit.MINUTES)
+                .build();
         new FetchFailed(okHttpClient, out, url, groovyScript).run(args);
     }
 
