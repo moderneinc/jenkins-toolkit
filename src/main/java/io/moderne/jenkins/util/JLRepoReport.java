@@ -1,19 +1,12 @@
 package io.moderne.jenkins.util;
 
-import com.netflix.graphql.dgs.client.MonoGraphQLClient;
-import com.netflix.graphql.dgs.client.WebClientGraphQLClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.web.reactive.function.client.ExchangeStrategies;
-import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -34,16 +27,16 @@ public class JLRepoReport {
     @SuppressWarnings("unchecked")
     public void run() {
 
-        Mono<List<JenkinsJob>> jenkinsJobs = jenkinsJobFetcher.fetchJenkinsJobs().collectList();
+        Mono<List<JenkinsJobSummary>> jenkinsJobs = jenkinsJobFetcher.fetchJenkinsJobSummaries().collectList();
 
         Mono<List<ModerneSaasRepository>> orgRepos = moderneSaasRepositoryFetcher.fetchRepositories(null);
 
         Mono.zip(jenkinsJobs, orgRepos).doOnNext(t -> {
-            List<JenkinsJob> jenkinsJobList = t.getT1();
+            List<JenkinsJobSummary> jenkinsJobSummaryList = t.getT1();
             List<ModerneSaasRepository> orgRepoList = t.getT2();
-            Map<String, JenkinsJob> jenkinsJobMap = jenkinsJobList.stream().collect(
+            Map<String, JenkinsJobSummary> jenkinsJobMap = jenkinsJobSummaryList.stream().collect(
                     Collectors.toMap(
-                            jenkinsJob -> jenkinsJob.name().replaceFirst("_", "/"),
+                            jenkinsJobSummary -> jenkinsJobSummary.name().replaceFirst("_", "/"),
                             Function.identity()
                     ));
             analyze("tmp-info-disc.txt", orgRepoList, jenkinsJobMap);
@@ -52,7 +45,7 @@ public class JLRepoReport {
 
     }
 
-    private void analyze(String filename, List<ModerneSaasRepository> orgRepoList, Map<String, JenkinsJob> jenkinsJobMap) {
+    private void analyze(String filename, List<ModerneSaasRepository> orgRepoList, Map<String, JenkinsJobSummary> jenkinsJobMap) {
         try (BufferedWriter writer = Files.newBufferedWriter(Path.of(filename + ".csv"))) {
             writer.write("repo, public_repo_exists, jenkins_job_status\n");
             InputStream resourceAsStream = getClass().getResourceAsStream("/jl/" + filename);
@@ -63,8 +56,8 @@ public class JLRepoReport {
                     String orgRepoName = repo.substring("https://github.com".length() + 1);
                     ModerneSaasRepository moderneRepo = orgRepoList.stream().filter(orgRepo -> orgRepo.path().equals(orgRepoName)).findFirst().orElse(null);
                     writer.write(Boolean.toString(moderneRepo != null) + ", ");
-                    JenkinsJob jenkinsJob = jenkinsJobMap.get(orgRepoName);
-                    writer.write(jenkinsJob == null ? "not found" : jenkinsJob.color());
+                    JenkinsJobSummary jenkinsJobSummary = jenkinsJobMap.get(orgRepoName);
+                    writer.write(jenkinsJobSummary == null ? "not found" : jenkinsJobSummary.color());
                     writer.write("\n");
                 }
             }

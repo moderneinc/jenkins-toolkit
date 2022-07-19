@@ -35,20 +35,20 @@ public class MissingOrgs {
             headers.setBearerAuth("mat-zliFfgWWrh-1ADuP1oX5EWYYKjVAVK3X");
         });
 
-        Mono<List<JenkinsJob>> blueJenkinsJobs = jenkinsJobFetcher.fetchJenkinsJobs().filter(jenkinsJob ->
-            jenkinsJob.name().startsWith("jenkinsci_") && jenkinsJob.color().equals("blue")
+        Mono<List<JenkinsJobSummary>> blueJenkinsJobs = jenkinsJobFetcher.fetchJenkinsJobSummaries().filter(jenkinsJobSummary ->
+            jenkinsJobSummary.name().startsWith("jenkinsci_") && jenkinsJobSummary.color().equals("blue")
         ).collectList();
 
         Mono<List<ModerneSaasRepository>> moderneSaasRepositories = moderneSaasRepositoryFetcher.fetchRepositories("jenkinsci");
 
         Mono.zip(blueJenkinsJobs, moderneSaasRepositories).doOnNext(t -> {
-            List<JenkinsJob> jenkinsJobList = t.getT1();
+            List<JenkinsJobSummary> jenkinsJobSummaryList = t.getT1();
             List<ModerneSaasRepository> orgRepoList = t.getT2();
             Map<String, ModerneSaasRepository> repoMap = orgRepoList.stream().collect(Collectors.toMap(ModerneSaasRepository::path, Function.identity()));
-            for (JenkinsJob jenkinsJob : jenkinsJobList) {
-                ModerneSaasRepository repository = repoMap.get(jenkinsJob.name().replaceFirst("_", "/"));
+            for (JenkinsJobSummary jenkinsJobSummary : jenkinsJobSummaryList) {
+                ModerneSaasRepository repository = repoMap.get(jenkinsJobSummary.name().replaceFirst("_", "/"));
                 if (repository == null) {
-                    log.info("Missing repository: {}", jenkinsJob.name());
+                    log.info("Missing repository: {}", jenkinsJobSummary.name());
                 }
             }
         }).block();
