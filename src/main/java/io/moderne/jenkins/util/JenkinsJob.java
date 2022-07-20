@@ -1,4 +1,6 @@
 package io.moderne.jenkins.util;
 
-public record JenkinsJob(String name, String color) {
+import java.util.List;
+
+public record JenkinsJob(String name, String color, List<Long> buildNumbers) {
 }
