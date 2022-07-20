@@ -8,19 +8,20 @@ import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
 @RequiredArgsConstructor
-public class MineFailedJobs {
+public class MineJobsData {
     private final OkHttpClient client;
     private final Path outputDir;
     private final HttpUrl url;
@@ -30,10 +31,10 @@ public class MineFailedJobs {
         String base = System.getProperty("url", "https://jenkins.moderne.ninja");
         HttpUrl url = base.endsWith("/") ? HttpUrl.get(base + "scriptText") : HttpUrl.get(base + "/scriptText");
         Path out = Paths.get(System.getProperty("outDir", "jenkins-failed"));
-        Path groovyScript = Paths.get("src/jenkins/groovy/find-failed.groovy");
+        Path groovyScript = Paths.get("src/jenkins/groovy/fetch-projects.groovy");
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder().readTimeout(1, TimeUnit.MINUTES).connectTimeout(1, TimeUnit.MINUTES).callTimeout(1, TimeUnit.MINUTES).build();
-        new MineFailedJobs(okHttpClient, out, url, groovyScript).run(args);
+        new MineJobsData(okHttpClient, out, url, groovyScript).run(args);
     }
 
     private String getCrumb(OkHttpClient client, String credential) {
@@ -67,7 +68,7 @@ public class MineFailedJobs {
                             .header("Jenkins-Crumb", crumb)
 
                     .build());
-            List<Failed> failed = new LinkedList<>();
+            List<JobSummary> summaries = new LinkedList<>();
             try (Response response = call.execute()) {
                 ResponseBody body = response.body();
                 assert body != null;
@@ -76,16 +77,43 @@ public class MineFailedJobs {
                     String[] parts = scanner.nextLine().split("\t");
                     String jobName = parts[0];
                     String buildNumber = parts[1];
-                    String consoleTextUrl = parts[2];
-                    failed.add(new Failed(jobName, buildNumber, consoleTextUrl));
+                    String buildTool = parts[2];
+                    String status = parts[3];
+                    String consoleTextUrl = parts[4];
+                    summaries.add(new JobSummary(jobName, buildNumber, buildTool, status, consoleTextUrl));
                 }
             }
-            log.info("Queuing up fetches for {} failed build(s) to store in {}", failed.size(), outputDir);
-            CountDownLatch latch = new CountDownLatch(failed.size());
-            for (Failed f : failed) {
+            log.info("Queuing up fetches for {} failed build(s) to store in {}", summaries.size(), outputDir);
+            CountDownLatch latch = new CountDownLatch(summaries.size());
+            Map<Integer, AtomicInteger> versionMap = new HashMap<>();
+            int totalProjects = 0;
+            int totalProjectsGradle = 0;
+            int totalProjectsMaven = 0;
+            int mavenFailures = 0;
+            int gradleFailures = 0;
+
+            for (JobSummary s : summaries) {
+                boolean isFailure = s.status.equals("failure");
+                totalProjects++;
+                if ("gradle".equals(s.buildTool)) {
+                    totalProjectsGradle++;
+                    if (isFailure) {
+                        gradleFailures++;
+                    }
+                } else if ("maven".equals(s.buildTool)) {
+                    totalProjectsMaven++;
+                    if (isFailure) {
+                        mavenFailures++;
+                    }
+                }
+                if ("maven".equals(s.buildTool)) {
+                    latch.countDown();
+                    continue;
+                }
+                //Search the gradle logs to determine which version of gradle.
                 Request r = new Request.Builder()
                         .get()
-                        .url(f.getConsoleTextUrl())
+                        .url(s.getConsoleTextUrl())
                         .header("Authorization", basicCredential)
                         .header("Jenkins-Crumb", crumb)
                         .build();
@@ -105,10 +133,19 @@ public class MineFailedJobs {
                                 log.warn("Received null body from {}", call.request().url());
                             } else {
                                 //BASED ON SOME PREDICATE, only write output for those failures that match.
-                                String consoleOut = new String(body.byteStream().readAllBytes());
-                                if (consoleOut.contains("Downloading https://services.gradle.org/distributions")) {
-                                    System.out.println("\"" +  f.getJobName() + "\",");
-                                    Files.writeString(outputDir.resolve(String.join(".", f.getJobName(), f.getBuildNumber(), "txt")), consoleOut);
+                                try (BufferedReader reader = new BufferedReader(new InputStreamReader(body.byteStream()))) {
+                                    String line = reader.readLine();
+                                    while (line != null) {
+                                        if (line.startsWith("Downloading https://services.gradle.org/distributions/gradle-")) {
+                                            String jobName = s.getJobName().substring(6).replaceFirst("_", "/");
+                                            Integer gradleMajor = Integer.parseInt(line.substring(61, line.indexOf('.', 61)));
+
+                                            versionMap.computeIfAbsent(gradleMajor, k -> new AtomicInteger(0)).incrementAndGet();
+                                            System.out.println(jobName + " - Gradle Version " + gradleMajor + ".x");
+                                            break;
+                                        }
+                                        line = reader.readLine();
+                                    }
                                 }
                             }
                         } finally {
@@ -123,6 +160,13 @@ public class MineFailedJobs {
             } else {
                 log.warn("Timeout expired while fetching output");
             }
+            System.out.println("Total Projects: " + totalProjects);
+            System.out.println(" Total Maven Projects: " + totalProjectsMaven);
+            System.out.println("       Maven Failures: " + mavenFailures);
+            System.out.println("Total Gradle Projects: " + totalProjectsGradle);
+            System.out.println("      Gradle Failures: " + gradleFailures);
+            System.out.println("Project counts by gradle version:");
+            versionMap.forEach((key, value) -> System.out.println("Gradle Version " + key + " project count = " + value));
             client.dispatcher().executorService().shutdown();
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
@@ -130,9 +174,11 @@ public class MineFailedJobs {
     }
 
     @Data
-    private static class Failed {
+    private static class JobSummary {
         private final String jobName;
         private final String buildNumber;
+        private final String buildTool;
+        private final String status;
         private final String consoleTextUrl;
     }
 }
