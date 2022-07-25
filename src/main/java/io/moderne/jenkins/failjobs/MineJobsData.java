@@ -161,7 +161,7 @@ public class MineJobsData {
                 log.warn("Timeout expired while fetching output");
             }
             System.out.println("Total Projects: " + totalProjects);
-            System.out.println(" Total Maven Projects: " + totalProjectsMaven);
+            System.out.println("Total Maven Projects: " + totalProjectsMaven);
             System.out.println("       Maven Failures: " + mavenFailures);
             System.out.println("Total Gradle Projects: " + totalProjectsGradle);
             System.out.println("      Gradle Failures: " + gradleFailures);
