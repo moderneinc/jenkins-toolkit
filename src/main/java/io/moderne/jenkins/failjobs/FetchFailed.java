@@ -35,7 +35,7 @@ public class FetchFailed {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(1, TimeUnit.MINUTES)
-                .callTimeout(1, TimeUnit.MINUTES)
+                .callTimeout(2, TimeUnit.MINUTES)
                 .readTimeout(5, TimeUnit.MINUTES)
                 .build();
         new FetchFailed(okHttpClient, out, url, groovyScript).run(args);
