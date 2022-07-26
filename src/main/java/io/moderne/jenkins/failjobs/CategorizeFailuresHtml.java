@@ -22,6 +22,17 @@ public class CategorizeFailuresHtml {
     private final Path jenkinsFailedJobLogsDir;
     private Path htmlOutDir;
 
+    private static final String HTML_HEADER = "<!doctype html>\n" +
+            "<html lang=\"en\">\n" +
+            "  <head>\n" +
+            "    <meta charset=\"utf-8\">\n" +
+            "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n" +
+            "\n" +
+            "    <!-- Bootstrap CSS -->\n" +
+            "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n" +
+            "\n" +
+            "  </head>\n";
+
     public static void main(String[] args) {
         new CategorizeFailuresHtml(
                 Paths.get("jenkins-failed"),
@@ -39,13 +50,15 @@ public class CategorizeFailuresHtml {
             throw new RuntimeException(e);
         }
         try (PrintWriter indexWriter = new PrintWriter(Files.newOutputStream(htmlOutDir.resolve("index.html"), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING))) {
-            indexWriter.write("<html><body>\n");
-            indexWriter.write("<table><tr><th>Message</th><th>Count</th></tr>\n");
+            indexWriter.write(HTML_HEADER);
+            indexWriter.write("<body>\n");
+            indexWriter.write("<table class=\"table\"><tr><th>Message</th><th>Count</th></tr>\n");
             AtomicInteger i = new AtomicInteger(0);
             group(extract()).forEach((k, v) -> {
                 int groupIndex = i.getAndIncrement();
                 try (PrintWriter groupWriter = new PrintWriter(Files.newOutputStream(htmlOutDir.resolve(groupIndex + ".html"), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING))) {
-                    groupWriter.write("<html><body><p>" + k + "</p><ul>");
+                    groupWriter.write(HTML_HEADER);
+                    groupWriter.write("<body><p>" + k + "</p><ul>");
                     v.forEach(consoleLogPath -> groupWriter.write("<li><a href=\"../jenkins-failed/" + consoleLogPath.getFileName() + "\">" + consoleLogPath.getFileName() + "</a></li>"));
                     groupWriter.write("</ul></body></html>");
                 } catch (IOException e) {
@@ -76,6 +89,7 @@ public class CategorizeFailuresHtml {
                     exceptions.add(new JobError(lines
                             .filter(l -> l.contains("Exception:") ||
                                     l.contains("Error:") ||
+                                    l.contains("ERROR") ||
                                     l.contains("An exception occurred") ||
                                     l.startsWith("Extension with name") ||
                                     l.startsWith("Could not find method mavenLocal()") ||
@@ -83,6 +97,7 @@ public class CategorizeFailuresHtml {
                                     l.contains("Could not resolve all files for configuration") ||
                                     l.contains("Publication only contains dependencies and/or constraints without a version") ||
                                     l.contains("Could not find method pluginManagement()") ||
+                                    l.contains("No signature of method: org.gradle.api.internal.tasks.RealizableTaskCollection.configureEach() is applicable for argument types") ||
                                     l.startsWith("\tat"))
                             .collect(Collectors.joining("\n")), f));
                 } catch (IOException e) {
