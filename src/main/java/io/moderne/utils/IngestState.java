@@ -18,8 +18,12 @@ public class IngestState {
     String style;
     String buildTool;
 
+    String skip;
+
+    String skipReason;
+
     public String toCsv() {
-        return repoName + "," + branch + "," + javaVersion + "," + style + "," + buildTool;
+        return repoName + "," + branch + "," + javaVersion + "," + style + "," + buildTool + "," + skip + "," + skipReason;
     }
 }
 

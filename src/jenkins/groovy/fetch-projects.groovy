@@ -28,7 +28,7 @@ for (AbstractProject<AbstractProject, AbstractBuild> project : projects) {
         if (started.isBefore(threshold)) {
             continue
         }
-        def jobName = project.fullName.replace('/', '-').replace(',', '-')
+        def jobName = project.fullName.replace(',', '&&&')
         def consoleTextUrl = build.absoluteUrl + 'consoleText'
         println([jobName, build.id, buildTool, status, consoleTextUrl].join("\t"))
     }
