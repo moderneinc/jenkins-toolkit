@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -26,7 +27,7 @@ public class IngestReport {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(1, TimeUnit.MINUTES)
-                .callTimeout(1, TimeUnit.MINUTES)
+                .callTimeout(2, TimeUnit.MINUTES)
                 .readTimeout(5, TimeUnit.MINUTES)
                 .build();
         new IngestReport(okHttpClient, url, groovyScript).run(args);
@@ -40,7 +41,7 @@ public class IngestReport {
                 log.error("{}: Unexpected status {}", request.url(), response);
                 throw new IllegalStateException("Unexpected status " + response.code());
             }
-            JsonNode responseNode = new ObjectMapper().readValue(response.body().string(), JsonNode.class);
+            JsonNode responseNode = new ObjectMapper().readValue(Objects.requireNonNull(response.body()).string(), JsonNode.class);
             return responseNode.get("crumb").asText();
 
         } catch (IOException e) {

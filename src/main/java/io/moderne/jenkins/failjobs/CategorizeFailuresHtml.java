@@ -100,6 +100,7 @@ public class CategorizeFailuresHtml {
                                     l.contains("Publication only contains dependencies and/or constraints without a version") ||
                                     l.contains("Could not find method pluginManagement()") ||
                                     l.contains("No signature of method: org.gradle.api.internal.tasks.RealizableTaskCollection.configureEach() is applicable for argument types") ||
+                                    l.contains("Publishing is not able to resolve a dependency on a project with multiple publications that have different coordinates.") ||
                                     l.startsWith("\tat"))
                             .collect(Collectors.joining("\n")), f));
                 } catch (IOException e) {

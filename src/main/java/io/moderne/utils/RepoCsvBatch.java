@@ -13,7 +13,7 @@ public class RepoCsvBatch {
 
     private static final IngestState REPOS_HEADER = new IngestState("repoName", "branch", "javaVersion", "style", "buildTool","skip", "skipReason");
 
-    private Set repoMask = new HashSet(Arrays.asList(
+    private final Set<String> repoMask = new HashSet<>(Arrays.asList(
 
     ));
 
@@ -22,7 +22,7 @@ public class RepoCsvBatch {
             return originalState;
         }
         originalState.skip="true";
-        originalState.skipReason="Build uses Gradle 4.x prior to 4.10, the artifactory plugin does not support these builds.";
+        originalState.skipReason="Build uses Gradle 4.x prior to 4.10 and the artifactory plugin does not support these builds.";
         return originalState;
     };
 
@@ -73,13 +73,13 @@ public class RepoCsvBatch {
 
     public static IngestState parseCsv(String line) {
         String[] values = line.split(",");
-        String repoName = null;
+        String repoName;
         String branch = "master";
         String javaVersion = "8";
         String style = "";
-        String buildTool = null;
+        String buildTool;
         boolean skip = false;
-        String skipReason = "";
+        String skipReason;
 
         if (values.length > 0) {
             repoName = values[0].trim();

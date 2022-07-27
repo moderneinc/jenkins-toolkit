@@ -14,10 +14,12 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -45,12 +47,15 @@ public class MineJobsData {
                 log.error("Unexpected status {}", response);
                 throw new IllegalStateException("Unexpected status " + response.code());
             }
-            JsonNode responseNode = new ObjectMapper().readValue(response.body().string(), JsonNode.class);
+            JsonNode responseNode = new ObjectMapper().readValue(Objects.requireNonNull(response.body()).string(), JsonNode.class);
             return responseNode.get("crumb").asText();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private record ErrorFoundAndGradleVersion(boolean errorFound, String gradleVersion) {
     }
 
     public void run(String[] args) {
@@ -60,12 +65,12 @@ public class MineJobsData {
             String basicCredential = Credentials.basic("greg@moderne.io", "11f8c789ae3574b09a6bfbbdfb157900e4");
             String crumb = getCrumb(client, basicCredential);
             Call call = client.newCall(new Request.Builder()
-                            .post(new FormBody.Builder()
+                    .post(new FormBody.Builder()
                             .add("script", scriptText)
                             .build())
                     .url(url)
-                            .header("Authorization", basicCredential)
-                            .header("Jenkins-Crumb", crumb)
+                    .header("Authorization", basicCredential)
+                    .header("Jenkins-Crumb", crumb)
 
                     .build());
             List<JobSummary> summaries = new LinkedList<>();
@@ -85,31 +90,9 @@ public class MineJobsData {
             }
             log.info("Queuing up fetches for {} failed build(s) to store in {}", summaries.size(), outputDir);
             CountDownLatch latch = new CountDownLatch(summaries.size());
-            Map<Integer, AtomicInteger> versionMap = new HashMap<>();
-            int totalProjects = 0;
-            int totalProjectsGradle = 0;
-            int totalProjectsMaven = 0;
-            int mavenFailures = 0;
-            int gradleFailures = 0;
 
             for (JobSummary s : summaries) {
                 boolean isFailure = s.status.equals("failure");
-                totalProjects++;
-                if ("gradle".equals(s.buildTool)) {
-                    totalProjectsGradle++;
-                    if (isFailure) {
-                        gradleFailures++;
-                    }
-                } else if ("maven".equals(s.buildTool)) {
-                    totalProjectsMaven++;
-                    if (isFailure) {
-                        mavenFailures++;
-                    }
-                }
-                if ("maven".equals(s.buildTool)) {
-                    latch.countDown();
-                    continue;
-                }
                 //Search the gradle logs to determine which version of gradle.
                 Request r = new Request.Builder()
                         .get()
@@ -132,19 +115,20 @@ public class MineJobsData {
                             } else if (body == null) {
                                 log.warn("Received null body from {}", call.request().url());
                             } else {
-                                //BASED ON SOME PREDICATE, only write output for those failures that match.
+                                String jobName = s.getJobName().substring(7).replaceFirst("_", "/");
+                                // In our example, we're only looking for failures, so skip processing successful job builds
+                                if (!isFailure) {
+                                    return;
+                                }
+                                // Based on some predicate, only write output for those failures that match.
                                 try (BufferedReader reader = new BufferedReader(new InputStreamReader(body.byteStream()))) {
-                                    String line = reader.readLine();
-                                    while (line != null) {
-                                        if (line.startsWith("Downloading https://services.gradle.org/distributions/gradle-")) {
-                                            String jobName = s.getJobName().substring(6).replaceFirst("_", "/");
-                                            Integer gradleMajor = Integer.parseInt(line.substring(61, line.indexOf('.', 61)));
-
-                                            versionMap.computeIfAbsent(gradleMajor, k -> new AtomicInteger(0)).incrementAndGet();
-                                            System.out.println(jobName + " - Gradle Version " + gradleMajor + ".x");
-                                            break;
+                                    String line;
+                                    while ((line = reader.readLine()) != null) {
+                                        // example console log filtering on a message we're looking for
+                                        if (line.contains("maven-default-http-blocker")) {
+                                            // output in a format suitable for pasting into a literal map in RepoCsvBatch
+                                            System.out.println("\"" + jobName + "\",");
                                         }
-                                        line = reader.readLine();
                                     }
                                 }
                             }
@@ -160,13 +144,6 @@ public class MineJobsData {
             } else {
                 log.warn("Timeout expired while fetching output");
             }
-            System.out.println("Total Projects: " + totalProjects);
-            System.out.println("Total Maven Projects: " + totalProjectsMaven);
-            System.out.println("       Maven Failures: " + mavenFailures);
-            System.out.println("Total Gradle Projects: " + totalProjectsGradle);
-            System.out.println("      Gradle Failures: " + gradleFailures);
-            System.out.println("Project counts by gradle version:");
-            versionMap.forEach((key, value) -> System.out.println("Gradle Version " + key + " project count = " + value));
             client.dispatcher().executorService().shutdown();
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
